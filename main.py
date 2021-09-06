@@ -12,7 +12,7 @@ password = os.environ['password']
 
 print('hi'+username+', Health Check!')
 driver = webdriver.Chrome()
-driver.get("https://myclu.callutheran.edu/health-check/?_=1")
+driver.get(url)
 assert "Cal Lutheran Login" in driver.title
 print('logging in')
 loginID = driver.find_element_by_id("frmLogin_UserName")
@@ -45,6 +45,3 @@ WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, r'/html/bo
 print('done')
 
 driver.close()
-
-# def waitForElement(self, XPATH)
-#     return
