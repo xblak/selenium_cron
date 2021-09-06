@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = os.environ('URL')
-username = os.environ('USERNAME')
-password = os.environ('PASSWORD')
+url = os.environ['URL']
+username = os.environ['USERNAME']
+password = os.environ['PASSWORD']
 
 print('hi'+username+', Health Check!')
 driver = webdriver.Chrome()
