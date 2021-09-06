@@ -10,8 +10,14 @@ url = os.environ['url']
 username = os.environ['username']
 password = os.environ['password']
 
-print('hi'+username+', Health Check!')
-driver = webdriver.Chrome()
+print('Health Check!')
+options = webdriver.ChromeOptions()
+options.add_argument("--no-sandbox")
+options.add_argument("--remote-debugging-port=9222")
+options.headless = True
+command_executor = "http://localhost:4444/wd/hub"
+driver = webdriver.Remote(command_executor, desired_capabilities=options.to_capabilities())
+# driver = webdriver.Chrome()
 driver.get(url)
 assert "Cal Lutheran Login" in driver.title
 print('logging in')
