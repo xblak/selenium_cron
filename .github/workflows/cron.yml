@@ -1,7 +1,7 @@
 name: cron
-on: [push]
-#      schedule:
-#        - cron: "0 1 * * *" #Runs everyday at 1:00AM
+on:
+  schedule:
+    - cron: "0 8 * * *" #Runs everyday at 8:00AM
 
 jobs:
   build:
