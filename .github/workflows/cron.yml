@@ -24,8 +24,8 @@ jobs:
           chromedriver --url-base=/wd/hub &
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
       - name: execute py script # run the run.py to get the latest data
-          run: |
-            python main.py
+        run: |
+          python main.py
         env:
           url: ${{ secrets.URL }}
           username: ${{ secrets.USERNAME }} # if run.py requires passwords..etc, set it as secrets
