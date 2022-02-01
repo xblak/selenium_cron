@@ -53,3 +53,4 @@ WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, r'/html/bo
 print('done')
 
 driver.close()
+
