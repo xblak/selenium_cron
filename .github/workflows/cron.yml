@@ -2,6 +2,8 @@ name: cron
 on:
   schedule:
     - cron:  '0 14 * * *'
+  release:
+    types: [edited]
 
 jobs:
   build:
