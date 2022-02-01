@@ -1,9 +1,8 @@
 name: cron
 on:
+  push
   schedule:
     - cron:  '0 14 * * *'
-  release:
-    types: [edited]
 
 jobs:
   build:
